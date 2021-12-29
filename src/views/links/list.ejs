@@ -1,0 +1,27 @@
+<%- include("../templates/header.ejs") %>
+
+<main class="mt-3 row px-5">
+    <% links.forEach(element => { %>
+    <div class="col-md-3">
+        <div class="text-center card">
+            <div class="card-body">
+                <a href="<%= element.url %> ">
+                    <h3 class="card-title text-uppercase">
+                        <%= element.title %>
+                    </h3>
+                </a>
+                <p class="card-text">
+                    <%= element.description %>
+                </p>
+                <p><%= time.format(element.createdAt) %> </p>
+            </div>
+            <div class="card-footer">
+                <a href="/links/delete/<%= element.idLink %>" class="btn btn-danger">Delete link</a>
+                <a href="/links/edit/<%= element.idLink %>" class="btn btn-info">Edit link</a>
+            </div>
+        </div>
+    </div>
+    <% }) %>
+</main>
+
+<%- include("../templates/footer.ejs", {}) %>

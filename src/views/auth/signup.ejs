@@ -1,0 +1,29 @@
+<%- include("../templates/header.ejs") %>
+
+    <main class="container w-25 mt-5">
+        <div class="card">
+            <div class="card-header">
+                <h1 class="text-center">Signup</h1>
+            </div>
+            <div class="card-body">
+                <form method="post">
+                    <div class="mb-3">
+                        <label for="" class="form-label">Nombre completo</label>
+                        <input type="text" name="fullname" placeholder="Fullname" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label for="" class="form-label">Username</label>
+                        <input type="text" name="username" placeholder="Username" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label for="" class="form-label">Password</label>
+                        <input type="password" name="password" placeholder="Password" class="form-control">
+                    </div>                
+                    <div class="mb-3">
+                        <input type="submit" value="Signup" class="btn btn-dark form-control">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+<%- include("../templates/footer.ejs", {}) %>

@@ -1,0 +1,28 @@
+<%- include("../templates/header.ejs") %>
+
+    <main class="container w-50 mt-4">
+        <div class="card">
+            <div class="card-body">
+                <form method="post">
+                    <div class="mb-3">
+                        <label for="" class="form-label">Titulo</label>
+                        <input type="text" name="title" placeholder="Titulo del link" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label for="" class="form-label">Url</label>
+                        <input type="url" name="url" placeholder="Direccion de enlace" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label for="" class="form-label">Descripcion</label>
+                        <textarea class="form-control" placeholder="Descripcion del vinculo" name="description" id="description" cols="30" rows="10">
+
+                        </textarea>
+                    </div>
+                    <div class="mb-3">
+                        <input type="submit" class="btn btn-dark form-control">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+<%- include("../templates/footer.ejs", {}) %>
